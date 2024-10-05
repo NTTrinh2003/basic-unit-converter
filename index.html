@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script src="utils.js"></script>
+        <!-- <script src="convert.js"></script> -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <section class="main-section">
+            <header class="nav header">
+                <h1>Unit Converter</h1>
+                <div class="switch-holder">
+                    <button href="#" class="switch-tab" name="leng" onclick="showTab(name)">Length</button>
+                    <button href="#" class="switch-tab" name="weig" onclick="showTab(name)">Weight</button>
+                    <button href="#" class="switch-tab" name="temp" onclick="showTab(name)">Temperature</button>
+                </div>
+            </header>
+
+            <main id="main-tabs">  
+                <div class="tab" id="leng">
+                    <fieldset>
+                        <p class="input leng" name="value">
+                            <label class="inp-label">Length to convert (Decimal):<br></label>
+                            <input type="text" class="inp-val" name="leng" inputmode="decimal"
+                            onkeypress="return inputHandle(event.charCode, name)">
+                        </p>
+
+                        <p class="input leng" name="from">
+                            <label class="inp-label">Unit to convert from:<br></label>
+                            <select class="conv-unit" name="leng" id="from" onchange="selectChange(name)" >
+                                <option value=""></option>
+                                <option value="cm">Centimeters</option>
+                                <option value="m">Meters</option>
+                                <option value="km">Kilometers</option>
+                                <option value="mi">Miles</option>
+                                <option value="mm">Milimeters</option>
+                                <option value="in">Inches</option>
+                                <option value="ft">Feet</option>
+                                <option value="yd">Yards</option>
+                            </select>
+                        </p>
+
+                        <p class="input leng" name="to">
+                            <label class="inp-label">Unit to convert to:<br></label>
+                            <select class="conv-unit" name="leng" id="to" onchange="selectChange(name)">
+                                <option value=""></option>
+                                <option value="cm">Centimeters</option>
+                                <option value="m">Meters</option>
+                                <option value="km">Kilometers</option>
+                                <option value="mi">Miles</option>
+                                <option value="mm">Milimeters</option>
+                                <option value="in">Inches</option>
+                                <option value="ft">Feet</option>
+                                <option value="yd">Yards</option>
+                            </select>
+                        </p>
+                        <button onclick="convertLength()" id="submit">Convert</button>
+                    </fieldset>
+                </div>
+
+                <div class="tab" id="weig">
+                    <fieldset>
+                        <p class="input weig" name="value">
+                            <label class="inp-label">Weight to convert (Decimal):<br></label>
+                            <input type="text" class="inp-val" name="weig" inputmode="decimal"
+                            onkeypress="return inputHandle(event.charCode, name)">
+                        </p>
+                        <p class="input weig" name="from">
+                            <label class="inp-label">Unit to convert from:<br></label>
+                            <select class="conv-unit" name="weig" id="from" onchange="selectChange(name)">
+                                <option value=""></option>
+                                <option value="mg">Miligrams</option>
+                                <option value="g">Grams</option>
+                                <option value="kg">Kilograms</option>
+                                <option value="t">Tons</option>
+                                <option value="lb">Pounds</option>
+                                <option value="oz">Ounces</option>
+                            </select>
+                        </p>
+                        <p class="input weig" name="to">
+                            <label class="inp-label">Unit to convert to:<br></label>
+                            <select class="conv-unit" name="weig" id="to" onchange="selectChange(name)">
+                                <option value=""></option>
+                                <option value="mg">Miligrams</option>
+                                <option value="g">Grams</option>
+                                <option value="kg">Kilograms</option>
+                                <option value="t">Tons</option>
+                                <option value="lb">Pounds</option>
+                                <option value="oz">Ounces</option>
+                            </select>
+                        </p>
+                        <button onclick="convertWeight()" id="submit">Convert</button>
+                    </fieldset>
+                </div>
+
+                <div class="tab" id="temp">
+                    <fieldset>
+                        <p class="input temp" name="value">
+                            <label class="inp-label">Temperature to convert (Decimal):<br></label>
+                            <input type="text" class="inp-val" name="temp" inputmode="decimal"
+                            onkeypress="return inputHandle(event.charCode, name)">
+                        </p>
+                        <p class="input temp" name="from">
+                            <label class="inp-label">Unit to convert from:<br></label>
+                            <select class="conv-unit" name="temp" id="from" onchange="selectChange(name)">
+                                <option value=""></option>
+                                <option value="c">Celsius</option>
+                                <option value="k">Kelvin</option>
+                                <option value="f">Fahrenheit</option>
+                            </select>
+                        </p>
+                        <p class="input temp" name="to">
+                            <label class="inp-label">Unit to convert to:<br></label>
+                            <select class="conv-unit" name="temp" id="to" onchange="selectChange(name)">
+                                <option value=""></option>
+                                <option value="c">Celsius</option>
+                                <option value="k">Kelvin</option>
+                                <option value="f">Fahrenheit</option>
+                            </select>
+                        </p>
+                        <button onclick="convertTemperature()" id="submit">Convert</button>
+                    </fieldset>
+                </div>
+
+                <div class="tab" id="result">
+                    <h2>Result of your 'Attr' conversion</h2>
+                    <h1>NULL</h1>
+                    <button onclick="showTab(attr)"></button>
+                </div>
+
+                <div class="tab" id="error">
+                    <h2>Insufficient units fo conversion</h2>
+                </div>
+            </main>
+        </section>
+    </body>
+</html>
