@@ -1,0 +1,158 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/* Section render */
+.main-section {
+    width: 20em;
+    height: 25em;
+    margin: auto;
+    border: 1px black solid;
+    border-radius: 0.6em;
+}
+
+/* Tabs navigation render */
+
+.nav.header {
+    width: 90%;
+    margin: auto;
+}
+
+.switch-holder {
+    width: 97.5%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.switch-tab {
+    border: #add1e7 solid 0.1em;
+    border-radius: 0.5em;
+
+    background-color: white;
+}
+
+.switch-tab:hover{
+    border: #009dff solid;
+    text-decoration: underline;
+    color: #009dff;
+    background-color: #bfe6ff;
+}
+
+.switch-tab.current {
+    border: #009dff solid;
+    text-decoration: underline;
+    color: #009dff;
+    background-color: #bfe6ff;
+}
+
+/* -------------------- */
+
+/* Form render */
+
+.inp-val {
+    width: 20.025em;
+    height: 1.5em;
+    border: 1px solid ;
+    border-radius: 0.4em;
+}
+
+.conv-unit {
+    width: 20.45em;
+    height: 2em;
+    border-radius: 0.4em;
+}
+
+fieldset {
+    height: 15em;
+    width:  17em;
+    
+    margin: auto;
+    padding: 0 1.5em 0 1.5em;
+
+    border: none
+}
+
+.inp-label {
+    margin-bottom: 0.5em;
+}
+
+.nav.header > h1 {
+    width: 100%;
+    margin-left: 0.25em;
+}
+
+#submit, #retry, #return {
+    width: 45%;
+    border: #3faaec 0.1em solid;
+    border-radius: 0.5em;
+}
+
+#submit:hover, #retry:hover, #return:hover {
+    /* width: 45%; */
+    border: #135e8d 0.15em solid;
+    background-color: #61b9f0;
+    color: #005a92;
+    /* border-radius: 0.5em; */
+}
+
+.result-container {
+    height: 15em;
+    width:  17em;
+    
+    margin: auto;
+    padding: 0 1.5em 0 1.5em;
+}
+
+.error-container {
+    height: 15em;
+    width:  17em;
+    
+    margin: auto;
+    padding: 0 1.5em 0 1.5em;
+}
+
+/* -------------- */
+
+/* Font render */
+
+.inp-label {
+    font-weight: 550;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+button {
+    font-family: 'Roboto Slab', serif;
+    font-size: medium;
+    font-weight: 700;
+}
+
+/* -------------------- */
+
+/* TABS START STATUS */
+.tab#leng{
+    display: none;
+}
+
+.tab#weig {
+    display: none;
+}
+
+.tab#temp {
+    display: none;
+}
+
+.tab#result {
+    display: none;
+}
+
+.tab#error {
+    display: none;
+}
+
+
+/* ----------------- */
+
